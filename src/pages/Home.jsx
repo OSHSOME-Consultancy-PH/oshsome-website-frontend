@@ -12,6 +12,8 @@ import { Toaster } from "../components/ui/sonner";
 import * as Icons from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
+import CTAButton from "@/components/ui/cta-button";
+
 const Icon = ({ name, className }) => {
   const Lucide = Icons[name] || Icons.Circle;
   return <Lucide className={className} />;
@@ -78,6 +80,7 @@ export default function HomePage() {
               {brand.hero.sub}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
+              {/*
               <Button
                 size="lg"
                 style={{ backgroundColor: brand.colors.primary, color: brand.colors.white }}
@@ -85,6 +88,7 @@ export default function HomePage() {
               >
                 Explore Module 1
               </Button>
+            
               <Button
                 size="lg"
                 variant="outline"
@@ -93,6 +97,11 @@ export default function HomePage() {
               >
                 Get Started
               </Button>
+              */}
+              
+              <CTAButton label="Explore Module 1" path="/module/wem" variant="primary" />
+              <CTAButton label="Get Started" path="/contact" variant="secondary" />
+
             </div>
           </div>
 
@@ -108,6 +117,7 @@ export default function HomePage() {
                 <Button type="submit" style={{ backgroundColor: brand.colors.gold, color: brand.colors.ink }}>
                   Submit Request
                 </Button>
+                {/*<CTAButton label="Submit Request" path="/start" variant="tertiary" />*/}
                 <span className="text-xs text-white/80">Proposal typically within 24 hours.</span>
               </div>
             </form>
